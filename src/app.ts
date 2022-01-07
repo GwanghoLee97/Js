@@ -49,18 +49,31 @@
 //result : 3
 
 //for, if로 2진수 1숫자세기
-function solution(a: number, b: number) {
-  const avg = a * b;
-  const setavg = avg.toString(2);
-  const i = setavg.split('');
-  let count = 0;
-  for (let j = 0; j < i.length; j++) {
-    if (i[j] == '1') {
-      count++;
+// function solution(a: number, b: number) {
+//   const avg = a * b;
+//   const setavg = avg.toString(2);
+//   const i = setavg.split('');
+//   let count = 0;
+//   for (let j = 0; j < i.length; j++) {
+//     if (i[j] == '1') {
+//       count++;
+//     }
+//   }
+//   console.log(count);
+//   console.log(i);
+// }
+// solution(-2, 7);
+// //result : 3
+
+//빈 배열 만들어서 약수 구하기
+function getDivisor(targetNumber: number) {
+  const arr = [];
+  for (let i = 1; i <= targetNumber; i++) {
+    if (targetNumber % i == 0) {
+      arr.push(i);
     }
   }
-  console.log(count);
-  console.log(i);
+  console.log(arr);
 }
-solution(-2, 7);
-//result : 3
+
+getDivisor(50);
