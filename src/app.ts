@@ -66,14 +66,45 @@
 // //result : 3
 
 //빈 배열 만들어서 약수 구하기
-function getDivisor(targetNumber: number) {
-  const arr = [];
-  for (let i = 1; i <= targetNumber; i++) {
-    if (targetNumber % i == 0) {
-      arr.push(i);
-    }
-  }
-  console.log(arr);
-}
+// function getDivisor(targetNumber: number) {
+//   const arr = [];
+//   for (let i = 1; i <= targetNumber; i++) {
+//     if (targetNumber % i == 0) {
+//       arr.push(i);
+//     }
+//   }
+//   console.log(arr);
+// }
 
-getDivisor(50);
+// getDivisor(50);
+
+//잠정 보류..... url들어가서 이해좀해보자
+//https://themarketer.tistory.com/73
+// function sol(num: number) {
+//   const arr = [];
+//   for (let i = 1; i <= num; i++) {
+//     let isPrimeNumber = true;
+//     for (let j = 2; j < i; j++) {
+//       if (i % j == 0) {
+//         isPrimeNumber = false;
+//       }
+//     }
+//     if (isPrimeNumber) {
+//       arr.push(i);
+//     }
+//   }
+//   console.log(arr);
+// }
+// sol(5);
+
+// 1. 숫자로 이루어진 배열이 매개변수인 arr와
+//숫자를 *2 해주는 함수를 매개변수로 받는 function 작성(고차함수)
+// function solution(arr: any, fn: any) {
+//   const a = arr;
+//   const b = [];
+//   for (let i = 0; i < a.length; i++) {
+//     b.push(fn(a[i]));
+//   }
+//   console.log(b);
+// }
+// solution([1, 2, 3, 4, 5], (num) => num * 2);
