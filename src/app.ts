@@ -183,22 +183,36 @@
 //    calc 함수가 있으면 start ~ end 숫자의 합을 구할때 각 요소들에 calc함수를 적용시켜야함
 //    (없으면 그냥 합계만 구하기)
 
-function solution(start: number, end: number, calc?: (num: number) => number) {
-  let a = 0;
-  for (let i = start; i <= end; i++) {
-    if (calc !== undefined) {
-      a = a + calc(i);
-    } else {
-      a = a + i;
-    }
-  }
-  console.log(a);
-}
-function calc(num: number) {
-  if (num % 2 === 0) {
-    return num * 2;
-  } else {
-    return num + 1;
-  }
-}
-solution(1, 5, calc);
+// 1차(수정전)
+// function solution(start: number, end: number, calc?: (num: number) => number) {
+//   let a = 0;
+//   for (let i = start; i <= end; i++) {
+//     if (calc !== undefined) {
+//       a = a + calc(i);
+//     } else {
+//       a = a + i;
+//     }
+//   }
+//   console.log(a);
+// }
+// function calc(num: number) {
+//   if (num % 2 === 0) {
+//     return num * 2;
+//   } else {
+//     return num + 1;
+//   }
+// }
+// solution(1, 5, calc);
+
+// 2차 (수정후)
+// function solution(start: number, end: number, calc?: (num: number) => number) {
+//   let a = 0;
+//   for (let i = start; i <= end; i++) {
+//     calc !== undefined ? (a = a + calc(i)) : i;
+//   }
+//   console.log(a);
+// }
+// function calc(num: number) {
+//   return num % 2 === 0 ? num * 2 : num + 1;
+// }
+// solution(1, 5, calc);
